@@ -20,7 +20,7 @@ require_once './koneksi.php';
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Data Kendaraan <?= getenv('DB_NAME') ?></a>
+      <a class="navbar-brand" href="#">Data Kendaraan?></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -48,7 +48,7 @@ require_once './koneksi.php';
       <div id="info"></div>
       <?php
       $sql = "SELECT * FROM tbl_1310520075";
-      $query = mysqli_query($link, $sql);
+      $query = pg_query($link, $sql);
       $rowCount = $query->num_rows;
       if ($rowCount <= 0):?>
         <div class="alert alert-warning">
@@ -72,7 +72,7 @@ require_once './koneksi.php';
           </thead>
           <tbody>
           <?php
-          while ($row = mysqli_fetch_object($query)):?>
+          while ($row = pg_fetch_object($query)):?>
             <tr>
               <td><?= $row->nomor_plat ?></td>
               <td><?= $row->nomor_mesin ?></td>

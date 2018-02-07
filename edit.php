@@ -1,8 +1,8 @@
 <?php
 require_once './koneksi.php';
 $id = $_GET['id'];
-$query = mysqli_query($link, "SELECT * FROM tbl_1310520075 WHERE id='${id}'");
-$result = mysqli_fetch_object($query);
+$query = pg_query($link, "SELECT * FROM tbl_1310520075 WHERE id='${id}'");
+$result = pg_fetch_object($query);
 ?>
 <!DOCTYPE html>
 <html>

@@ -11,6 +11,6 @@ include_once 'koneksi.php';
 if ('POST' == $_SERVER['REQUEST_METHOD']) {
   $id = $_POST['id'];
   $query = "DELETE FROM tbl_1310520075 WHERE id='${id}'";
-  $result = mysqli_query($link, $query);
+  $result = pg_query($link, $query);
   echo $result;
 }

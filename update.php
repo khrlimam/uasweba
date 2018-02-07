@@ -17,6 +17,6 @@ if ('POST' == $_SERVER['REQUEST_METHOD']) {
   $namaPemilik = $_POST['namaPemilik'];
   $tahunPerakitan = $_POST['tahunPerakitan'];
   $query = "UPDATE `tbl_1310520075` SET `nomor_plat` = '${noPlat}', `nomor_mesin` = '${noMesin}', `nomor_rangka` = '${noRangka}', `kode_daerah` = '${kodeDaerah}', `nama_pemilik` = '${namaPemilik}', `tahun_perakitan` = '${tahunPerakitan}' WHERE `tbl_1310520075`.`id` = ${id}";
-  $result = mysqli_query($link, $query);
+  $result = pg_query($link, $query);
   echo $result;
 }
