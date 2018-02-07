@@ -1,8 +1,10 @@
 <?php
 
-$host = 'localhost';
-$user = 'root';
-$password = '';
-$database = 'uas_b';
+$host = getenv('DB_HOST');
+$user = getenv('DB_USER');
+$password = getenv('DB_PASSWORD');
+$database = getenv('DB_NAME');
+$port = getenv('DB_PORT');
+$connectionString = "host=${host} port=${port} dbname=${database} user=${user} password=${password}";
 
-$link = mysqli_connect($host, $user, $password, $database);
+$link = pg_connect($connectionString);

@@ -20,7 +20,7 @@ require_once './koneksi.php';
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Data Kendaraan</a>
+      <a class="navbar-brand" href="#">Data Kendaraan <?= getenv('DB_NAME') ?></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -103,11 +103,19 @@ require_once './koneksi.php';
 </body>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script>
   function deleteThis(id, element) {
-    var delete_ = confirm("Yakin ingin menghapus data?");
-    if (delete_) {
-      $.ajax({
+    swal({
+      title: "Yakin ingin menghapus data?",
+      text: "Setelah terhapus anda tidak akan bisa mengembalikan data ini lagi!",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })
+    .then((willDelete) => {
+      if (willDelete) {
+        $.ajax({
             type: 'POST',
             url: 'delete.php',
             data: {'id': id},
@@ -124,8 +132,11 @@ require_once './koneksi.php';
               alert(r);
             }
           }
-      )
-    }
+        )
+      } else {
+        swal("Data anda aman tersimpan!");
+      }
+    });
   }
 </script>
 </html>
