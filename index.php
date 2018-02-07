@@ -30,7 +30,7 @@ require_once './koneksi.php';
         <li><a href="tambah.php">Tambah Data Kendaraan</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="https://github.com/khyrulimam/uasweba" target="_blank"><span class="fa fa-cloud-download-alt"></span> Download Code</a></li>
+        <li><a href="https://github.com/khyrulimam/uasweba" target="_blank"><i class="fas fa-cloud-download-alt"></i> Download Code</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
