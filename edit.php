@@ -64,17 +64,17 @@ $result = mysqli_fetch_object($query);
                 <div class="form-group">
                   <label for="nomorPlat">Nomor Plat</label>
                   <input type="text" value="<?= ($result) ? $result->nomor_plat : '' ?>" class="form-control"
-                         name="nomorPlat" id="nomorPlat" placeholder="Nomor Plat">
+                         name="nomorPlat" required id="nomorPlat" placeholder="Nomor Plat">
                 </div>
                 <div class="form-group">
                   <label for="nomorMesin">Nomor Mesin</label>
                   <input type="text" value="<?= ($result) ? $result->nomor_mesin : '' ?>" class="form-control"
-                         name="nomorMesin" id="nomorMesin" placeholder="Nomor Mesin">
+                         name="nomorMesin" required id="nomorMesin" placeholder="Nomor Mesin">
                 </div>
                 <div class="form-group">
                   <label for="nomorRangka">Nomor Rangka</label>
                   <input type="text" value="<?= ($result) ? $result->nomor_rangka : '' ?>" class="form-control"
-                         name="nomorRangka" id="nomorRangka" placeholder="Nomor Rangka">
+                         name="nomorRangka" required id="nomorRangka" placeholder="Nomor Rangka">
                 </div>
                 <div class="form-group">
                   <label>Kode Daerah</label>
@@ -96,13 +96,13 @@ $result = mysqli_fetch_object($query);
                 <div class="form-group">
                   <label for="namaPemilik">Nama Pemilik</label>
                   <input type="text" value="<?= ($result) ? $result->nama_pemilik : '' ?>" class="form-control"
-                         name="namaPemilik" id="namaPemilik"
+                         name="namaPemilik" required id="namaPemilik"
                          placeholder="Nama Pemilik">
                 </div>
                 <div class="form-group">
                   <label for="tahunPerakitan">Tahun Perakitan</label>
                   <input type="number" value="<?= ($result) ? $result->tahun_perakitan : '' ?>" maxlength="4" min="1950"
-                         name="tahunPerakitan" class="form-control"
+                         name="tahunPerakitan" required class="form-control"
                          id="tahunPerakitan" placeholder="Tahun Perakitan">
                 </div>
                 <button type="submit" id="simpanKendaraan" class="btn btn-warning">Ubah</button>

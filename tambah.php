@@ -59,15 +59,15 @@ require_once './koneksi.php';
               <form id="formTambahKendaraan">
                 <div class="form-group">
                   <label for="nomorPlat">Nomor Plat</label>
-                  <input type="text" class="form-control" name="nomorPlat" id="nomorPlat" placeholder="Nomor Plat">
+                  <input type="text" class="form-control" name="nomorPlat" required id="nomorPlat" placeholder="Nomor Plat">
                 </div>
                 <div class="form-group">
                   <label for="nomorMesin">Nomor Mesin</label>
-                  <input type="text" class="form-control" name="nomorMesin" id="nomorMesin" placeholder="Nomor Mesin">
+                  <input type="text" class="form-control" name="nomorMesin" required id="nomorMesin" placeholder="Nomor Mesin">
                 </div>
                 <div class="form-group">
                   <label for="nomorRangka">Nomor Rangka</label>
-                  <input type="text" class="form-control" name="nomorRangka" id="nomorRangka" placeholder="Nomor Rangka">
+                  <input type="text" class="form-control" name="nomorRangka" required id="nomorRangka" placeholder="Nomor Rangka">
                 </div>
                 <div class="form-group">
                   <label>Kode Daerah</label>
@@ -86,11 +86,11 @@ require_once './koneksi.php';
                 </div>
                 <div class="form-group">
                   <label for="namaPemilik">Nama Pemilik</label>
-                  <input type="text" class="form-control" name="namaPemilik" id="namaPemilik" placeholder="Nama Pemilik">
+                  <input type="text" class="form-control" name="namaPemilik" required id="namaPemilik" placeholder="Nama Pemilik">
                 </div>
                 <div class="form-group">
                   <label for="tahunPerakitan">Tahun Perakitan</label>
-                  <input type="number" maxlength="4" min="1950" name="tahunPerakitan" class="form-control" id="tahunPerakitan" placeholder="Tahun Perakitan">
+                  <input type="number" maxlength="4" min="1950" name="tahunPerakitan" required class="form-control" id="tahunPerakitan" placeholder="Tahun Perakitan">
                 </div>
                 <button type="submit" id="simpanKendaraan" class="btn btn-default">Simpan</button>
                 <br>
