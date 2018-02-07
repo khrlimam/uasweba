@@ -20,7 +20,7 @@ require_once './koneksi.php';
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Data Kendaraan?></a>
+      <a class="navbar-brand" href="#">Data Kendaraan</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
