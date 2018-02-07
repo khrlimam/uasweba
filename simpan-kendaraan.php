@@ -15,7 +15,7 @@ if ('POST' == $_SERVER['REQUEST_METHOD']) {
   $kodeDaerah = $_POST['kodeDaerah'];
   $namaPemilik = $_POST['namaPemilik'];
   $tahunPerakitan = $_POST['tahunPerakitan'];
-  $query = "INSERT INTO tbl_1310520075 (`nomor_plat`, `nomor_mesin`, `nomor_rangka`, `kode_daerah`, `nama_pemilik`, `tahun_perakitan`) VALUES ('${noPlat}', '${noMesin}', '${noRangka}', '${kodeDaerah}', '${namaPemilik}', '${tahunPerakitan}')";
+  $query = "INSERT INTO tbl_1310520075 VALUES (DEFAULT, '${noPlat}', '${noMesin}', '${noRangka}', '${kodeDaerah}', '${namaPemilik}', '${tahunPerakitan}')";
   $result = pg_query($link, $query);
   echo $result;
 }
