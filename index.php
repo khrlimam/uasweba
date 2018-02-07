@@ -47,7 +47,7 @@ require_once './koneksi.php';
       </ol>
       <div id="info"></div>
       <?php
-      $sql = "SELECT * FROM tbl_1310520075";
+      $sql = "SELECT * FROM tbl_1310520075 ORDER BY id";
       $query = pg_query($link, $sql);
       $rowCount = pg_num_rows($query);
       if ($rowCount <= 0):?>
