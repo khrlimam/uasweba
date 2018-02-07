@@ -93,7 +93,7 @@ require_once './koneksi.php';
                   <label for="tahunPerakitan">Tahun Perakitan</label>
                   <input type="number" maxlength="4" min="1950" name="tahunPerakitan" required class="form-control" id="tahunPerakitan" placeholder="Tahun Perakitan">
                 </div>
-                <button type="submit" id="simpanKendaraan" class="btn btn-default">Simpan</button>
+                <button type="submit" id="simpanKendaraan" class="btn btn-default"><span id="loading" class="fa fa-hourglass-end fa-spin"></span> Simpan</button>
                 <br>
                 <br>
                 <div id="info"></div>
@@ -111,6 +111,10 @@ require_once './koneksi.php';
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script>
+  var spinner = $("#loading");
+  $(function() {
+    spinner.hide();
+  });
   $("#formTambahKendaraan").submit(function (e) {
     e.preventDefault();
     console.log($(this).serializeArray());
