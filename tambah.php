@@ -117,17 +117,19 @@ require_once './koneksi.php';
   });
   $("#formTambahKendaraan").submit(function (e) {
     e.preventDefault();
-    console.log($(this).serializeArray());
+    spinner.show();
     $.ajax({
       type: 'POST',
       url: 'simpan-kendaraan.php',
       data: $(this).serializeArray(),
       success: function (r) {
+        spinner.hide();
         message = "<div class='alert alert-info'>Berhasil menambahkan data kendaraan baru. <a href='index.php' class='alert-link'>Kembali kehalaman semua kendaraan</a></div>"
         if (r)
           $("#info").html(message)
       },
       error: function (r) {
+        spinner.hide();
         console.log(r)
       }
     })

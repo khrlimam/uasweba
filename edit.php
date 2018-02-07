@@ -106,7 +106,7 @@ $result = pg_fetch_object($query);
                          name="tahunPerakitan" required class="form-control"
                          id="tahunPerakitan" placeholder="Tahun Perakitan">
                 </div>
-                <button type="submit" id="simpanKendaraan" class="btn btn-warning">Ubah</button>
+                <button type="submit" id="simpanKendaraan" class="btn btn-warning"><span id="loading" class="fa fa-hourglass-end fa-spin"></span> Ubah</button>
                 <br>
                 <br>
                 <div id="info"></div>
@@ -124,19 +124,25 @@ $result = pg_fetch_object($query);
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script>
+  var spinner = $("#loading");
+  $(function() {
+    spinner.hide();
+  });
   $("#formTambahKendaraan").submit(function (e) {
     e.preventDefault();
-    console.log($(this).serializeArray());
+    spinner.show();
     $.ajax({
       type: 'POST',
       url: 'update.php',
       data: $(this).serializeArray(),
       success: function (r) {
+        spinner.hide();
         message = "<div class='alert alert-info'>Berhasil mengubah data kendaraan. <a href='index.php' class='alert-link'>Kembali kehalaman semua kendaraan</a></div>"
         if (r)
           $("#info").html(message)
       },
       error: function (r) {
+        spinner.hide();
         console.log(r)
       }
     })
