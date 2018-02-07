@@ -11,6 +11,7 @@ $result = pg_fetch_object($query);
   <title>Data Kendaraan</title>
 </head>
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
 <nav class="navbar navbar-inverse navbar-static-top">
   <div class="container">
