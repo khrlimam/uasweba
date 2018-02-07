@@ -8,6 +8,7 @@ require_once './koneksi.php';
   <title>Data Kendaraan</title>
 </head>
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
 <nav class="navbar navbar-inverse navbar-static-top">
   <div class="container">
@@ -30,7 +31,7 @@ require_once './koneksi.php';
         <li><a href="tambah.php">Tambah Data Kendaraan</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="https://github.com/khyrulimam/uasweba" target="_blank"><i class="fas fa-cloud-download-alt"></i> Download Code</a></li>
+        <li><a href="https://github.com/khyrulimam/uasweba" target="_blank"><span class="fa fa-cloud-download"></span> Download Code</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
