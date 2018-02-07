@@ -30,6 +30,9 @@ require_once './koneksi.php';
         <li><a href="index.php">Halaman Depan <span class="sr-only">(current)</span></a></li>
         <li class="active"><a href="#">Tambah Data Kendaraan</a></li>
       </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://github.com/khyrulimam/uasweba" target="_blank"><span class="fa fa-cloud-download-alt"></span> Download Code</a></li>
+      </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
