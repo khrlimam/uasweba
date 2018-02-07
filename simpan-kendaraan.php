@@ -16,6 +16,6 @@ if ('POST' == $_SERVER['REQUEST_METHOD']) {
   $namaPemilik = $_POST['namaPemilik'];
   $tahunPerakitan = $_POST['tahunPerakitan'];
   $query = "INSERT INTO tbl_1310520075 VALUES ('', '${noPlat}', '${noMesin}', '${noRangka}', '${kodeDaerah}', '${namaPemilik}', '${tahunPerakitan}')";
-  $result = mysqli_query($link, $query);
+  $result = pg_query($link, $query);
   echo $result;
 }
