@@ -49,7 +49,7 @@ require_once './koneksi.php';
       <?php
       $sql = "SELECT * FROM tbl_1310520075";
       $query = pg_query($link, $sql);
-      $rowCount = $query->num_rows;
+      $rowCount = pg_num_rows($query);
       if ($rowCount <= 0):?>
         <div class="alert alert-warning">
           Tidak ada data kendaraan. <a class="alert-link" href="tambah.php">Tambahkan data kendaraan baru?</a>
